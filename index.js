@@ -68,10 +68,10 @@ document.addEventListener('DOMContentLoaded', function() {
         
         const messageContent = `
             <div class="flex items-start space-x-3 ${sender === 'user' ? 'flex-row-reverse space-x-reverse' : ''}" style="padding:10px;">
-                <div class="${sender === 'user' ? 'bg-blue-500' : 'bg-green-500'} text-white rounded-full w-8 h-8 flex items-center justify-center" style="min-width:32px;">
+                <div class="${sender === 'user' ? 'bg-blue-500' : ''} text-white rounded-full w-8 h-8 flex items-center justify-center" style="min-width:32px;">
                     ${sender === 'user' ? 
                         '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z" clip-rule="evenodd" /></svg>' : 
-                        '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5"><path d="M5.566 4.657A4.505 4.505 0 016.75 4.5h10.5c.41 0 .806.055 1.183.157A3 3 0 0015.75 3h-7.5a3 3 0 00-2.684 1.657zM2.25 12a3 3 0 013-3h13.5a3 3 0 013 3v6a3 3 0 01-3 3H5.25a3 3 0 01-3-3v-6zM5.25 7.5c-.41 0-.806.055-1.184.157A3 3 0 016.75 6h10.5a3 3 0 012.683 1.657A4.505 4.505 0 0018.75 7.5H5.25z" /></svg>'}
+                        '<div style="background-image: url(./ai_bot.png);background-position: center;background-size: contain;background-repeat:no-repeat;height:32px;width:32px;"></div>'}
                 </div>
                 <div class="${sender === 'user' ? 'text-right' : ''}">
                     <p class="font-medium text-gray-800">${sender === 'user' ? 'You' : 'Useless Ai Assitant'}</p>
@@ -99,10 +99,8 @@ document.addEventListener('DOMContentLoaded', function() {
         typingDiv.className = 'message bg-gray-100 rounded-lg p-4 max-w-[85%] w-fit typing-indicator';
         typingDiv.innerHTML = `
             <div class="flex items-start space-x-3">
-                <div class="bg-green-500 text-white rounded-full w-8 h-8 flex items-center justify-center" style="min-width:32px;">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                        <path d="M5.566 4.657A4.505 4.505 0 016.75 4.5h10.5c.41 0 .806.055 1.183.157A3 3 0 0015.75 3h-7.5a3 3 0 00-2.684 1.657zM2.25 12a3 3 0 013-3h13.5a3 3 0 013 3v6a3 3 0 01-3 3H5.25a3 3 0 01-3-3v-6zM5.25 7.5c-.41 0-.806.055-1.184.157A3 3 0 016.75 6h10.5a3 3 0 012.683 1.657A4.505 4.505 0 0018.75 7.5H5.25z" />
-                    </svg>
+                <div class=" text-white rounded-full w-8 h-8 flex items-center justify-center" style="min-width:32px;">
+                    <div style="background-image: url(./ai_bot.png);background-position: center;background-size: contain;background-repeat:no-repeat;height:32px;width:32px;"></div>
                 </div>
                 <div>
                     <p class="font-medium text-gray-800">Useless Ai Assitant</p>
